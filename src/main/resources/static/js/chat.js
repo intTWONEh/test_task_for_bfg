@@ -105,7 +105,7 @@ function addUserInUserList(messageData) {
 }
 
 function getChatId(fromId) {
-    return fromId === 'GENERAL' ? fromId : [userId, fromId].sort().join('|')
+    return fromId === 'GENERAL' ? fromId : [userId, fromId].sort().join('+')
 }
 
 function removeUserInUserList(messageData) {
@@ -118,10 +118,9 @@ function removeUserInUserList(messageData) {
 function sendMessage() {
     let message = createMessage(userId, userList.value, messageArea.value, chatId, 'TEXT')
 
-    messages.get(chatId).push(message)
-
     if (userList.value !== 'GENERAL') {
         chatArea.value += userId.split(':')[1] + ': ' + messageArea.value + '\n'
+        messages.get(chatId).push(message)
     }
 
     ws.send(JSON.stringify(message));
