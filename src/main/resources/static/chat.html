@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="js/chat.js"></script>
+</head>
+<body onload="init()">
+<table border="1">
+    <tr>
+        <td>
+            <select id="user-list" onchange="selectUser()" size="28">
+                <option selected value="GENERAL">GENERAL</option>
+            </select>
+        </td>
+        <td colspan="2">
+            <textarea rows="30" cols="60" readonly id="chat-area"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="logout" onclick="logout()">Exit</button>
+            </br>
+            <button id="download-chat" onclick="downloadMessage()">Download message</button>
+        </td>
+        <td>
+            <textarea rows="3" cols="45" id="message-area"></textarea>
+        </td>
+        <td>
+            <button id="send-message" onclick="sendMessage()">Send message</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
