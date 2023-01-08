@@ -12,5 +12,5 @@
 
 Пример работы:
 <p align="center">
-<img  src="https://github.com/intTWONEh/test_task_for_bfg/blob/main/check.PNG" alt="interaction.png">
+<img  src="https://github.com/intTWONEh/test_task_for_bfg/blob/master/check.png" alt="check.png">
 </p>
